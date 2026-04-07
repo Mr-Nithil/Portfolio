@@ -2012,3 +2012,189 @@ textarea:focus {
     max-height: min(62vh, 620px);
   }
 }
+
+/* Responsive refinements for tablets and phones */
+@media (max-width: 1200px) {
+  #root {
+    width: min(1160px, 94vw);
+  }
+
+  .section {
+    padding: clamp(1rem, 1.8vw, 1.5rem);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card-title {
+    min-height: 2.35em;
+  }
+
+  .project-card-stack {
+    min-height: 5.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    width: min(100%, 95vw);
+  }
+
+  main {
+    padding: 1rem 0 2.6rem;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0.35rem;
+    border-radius: 0.85rem;
+    padding: 0.62rem 0.7rem;
+    gap: 0.55rem;
+  }
+
+  .nav-list {
+    width: 100%;
+    justify-content: center;
+    row-gap: 0.35rem;
+    column-gap: 0.8rem;
+  }
+
+  .nav-list a {
+    font-size: 0.85rem;
+  }
+
+  .section {
+    margin-top: 1.4rem;
+    border-radius: 1rem;
+  }
+
+  .hero-layout,
+  .about-grid,
+  .contact-grid,
+  .modal-layout-grid,
+  .modal-editorial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-media {
+    max-width: 260px;
+    margin-inline: auto;
+  }
+
+  .skills-grid,
+  .projects-grid,
+  .edu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    gap: 0.68rem;
+  }
+
+  .project-card-title,
+  .project-card-summary,
+  .project-card-stack {
+    min-height: 0;
+  }
+
+  .project-card-summary {
+    -webkit-line-clamp: 4;
+  }
+
+  .publication-item,
+  .certification-item {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "thumb"
+      "copy"
+      "actions";
+    align-items: start;
+  }
+
+  .publication-thumb-btn,
+  .certificate-thumb-btn {
+    width: min(180px, 100%);
+    align-self: start;
+  }
+
+  .leadership-role-row {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  .leadership-role-row .leadership-role-period {
+    justify-self: start;
+  }
+
+  .modal {
+    width: min(100%, 96vw);
+    max-height: 94vh;
+  }
+
+  .modal-gallery img {
+    max-height: 280px;
+  }
+
+  .modal-actions {
+    justify-content: stretch;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #root {
+    width: 96vw;
+  }
+
+  .site-header {
+    padding: 0.55rem 0.58rem;
+    border-radius: 0.75rem;
+  }
+
+  .brand {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .nav-list a {
+    font-size: 0.8rem;
+  }
+
+  .section {
+    padding: 0.9rem;
+  }
+
+  .project-card-chip {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .project-card-chip-name {
+    max-width: none;
+  }
+
+  .modal-head-title {
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+
+  .modal-project-year {
+    font-size: 0.72rem;
+  }
+
+  .modal-stack-chip {
+    width: 100%;
+  }
+
+  .contact-link {
+    padding: 0.65rem 0.7rem;
+  }
+}
