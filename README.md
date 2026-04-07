@@ -1,15 +1,42 @@
-# Nithil Sheshan Portfolio
+# Nithil Sheshan | Personal Portfolio
 
-Minimal, modern, Flutter-focused developer portfolio built with React + Vite.
+This repository contains my personal portfolio website, built to present my profile, technical skills, projects, publications, certifications, leadership experience, and contact details in one place.
 
-## Features
+The portfolio is built with React and Vite, and designed to be clean, responsive, and easy to maintain.
 
-- Dark mode by default with light mode toggle and persistence
-- Modular components and data-driven project cards
-- Project details modal with image carousel
-- Smooth section reveal animations and scroll progress bar
-- Responsive mobile-first layout
-- SEO-ready metadata and static deployment support
+## Live Portfolio
+
+View the deployed site here: https://mr-nithil.github.io/Portfolio
+
+## About Me
+
+I am a Mobile Engineer focused on Flutter development, cross-platform app architecture, and production-ready implementation. This portfolio is my central space to showcase real work, technical depth, and engineering growth.
+
+## Connect
+
+- GitHub: https://github.com/Mr-Nithil
+- LinkedIn: https://www.linkedin.com/in/nithil-sheshan-4a3945210/
+- Medium: https://medium.com/@nithilsheshan
+- Email: mailto:nithil.sheshan@gmail.com
+
+## What This Portfolio Includes
+
+- Hero section with personal introduction and quick actions
+- About section focused on engineering background and strengths
+- Skills and technology highlights
+- Project showcase with detailed modal view and image gallery
+- Experience and education timeline
+- Publications and certifications with preview support
+- Leadership and volunteering section with gallery expansion
+- Contact section with direct links
+- Mobile-first responsive behavior across all sections
+
+## Tech Stack
+
+- React
+- Vite
+- JavaScript (ES modules)
+- CSS (custom responsive styling)
 
 ## Project Structure
 
@@ -18,11 +45,15 @@ src/
 	components/
 	data/
 		projects.js
+		techIcons.js
 	pages/
 	styles/
 	assets/
 public/
 	projects/
+	certifications/
+	leadership-volunteering/
+	contact-icons/
 ```
 
 ## Run Locally
@@ -32,37 +63,37 @@ npm install
 npm run dev
 ```
 
-## Build for Production
+## Production Build
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## GitHub Pages Deployment
+## Deployment (GitHub Pages)
 
-1. Update the `homepage` value in `package.json`:
+1. Set the homepage in package.json:
 
 ```json
 "homepage": "https://<your-github-username>.github.io/<your-repo-name>/"
 ```
 
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Deploy:
+2. Deploy:
 
 ```bash
 npm run deploy
 ```
 
-4. In repository settings, enable GitHub Pages from the `gh-pages` branch.
+3. In repository settings, enable GitHub Pages from the gh-pages branch.
 
-## Customization
+## Personalization Guide
 
-- Update personal info in component files under `src/components/`
-- Add/edit projects in `src/data/projects.js`
-- Replace placeholder CV at `public/Nithil-Sheshan-CV.pdf`
+- Update section content in src/components/
+- Manage project content in src/data/projects.js
+- Manage tech icon mapping in src/data/techIcons.js
+- Replace media assets under public/
+- Replace CV file in public/ and update the download link if needed
+
+## Notes
+
+This is a personal portfolio project, so the structure and content are intentionally customized for profile presentation rather than a general product workflow.
