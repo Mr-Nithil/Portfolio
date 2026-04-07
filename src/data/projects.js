@@ -13,7 +13,7 @@ const projectData = [
       "projects/fuelback-2.svg",
       "projects/fuelback-3.svg",
     ],
-    github: "https://github.com/Mr-Nithil",
+    github: "https://github.com/Mr-Nithil/blog_app",
     demo: "",
   },
   {
@@ -40,7 +40,7 @@ const projectData = [
       "projects/qrpay-2.svg",
       "projects/qrpay-3.svg",
     ],
-    github: "https://github.com/Mr-Nithil",
+    github: "https://github.com/Mr-Nithil/Task-Manager-WebApp",
     demo: "",
   },
   {
@@ -64,8 +64,9 @@ const projectData = [
       "projects/qrpay-2.svg",
       "projects/ble-2.svg",
     ],
-    github: "https://github.com/Mr-Nithil",
-    demo: "",
+    github:
+      "https://github.com/Mr-Nithil/ruh_fyp_railway_ticket_verification_app",
+    demo: "https://www.linkedin.com/posts/nithil-sheshan-4a3945210_flutter-dart-firebase-activity-7442473107270868992-gKJN/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADWIVHsBQyvJg7MFpZpjndpUXN6v4s4fnlE",
   },
   {
     id: "safety-companion-app",
@@ -83,7 +84,7 @@ const projectData = [
       "Firebase Core",
     ],
     images: ["projects/ble-1.svg", "projects/ble-2.svg", "projects/ble-3.svg"],
-    github: "https://github.com/Mr-Nithil",
+    github: "https://github.com/Mr-Nithil/safety_companion",
     demo: "",
   },
   {
@@ -109,7 +110,7 @@ const projectData = [
       "projects/fuelback-2.svg",
       "projects/fuelback-3.svg",
     ],
-    github: "https://github.com/Mr-Nithil",
+    github: "https://github.com/lasith54/Bookfair-Stall-Management-System",
     demo: "",
   },
   {
@@ -135,7 +136,7 @@ const projectData = [
       "projects/ble-1.svg",
       "projects/fuelback-3.svg",
     ],
-    github: "https://github.com/Mr-Nithil",
+    github: "https://github.com/PereraKRD/ERPProject",
     demo: "",
   },
 ];

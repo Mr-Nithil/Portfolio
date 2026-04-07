@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { projects } from "../data/projects";
+import { techIcons } from "../data/techIcons";
 import ProjectModal from "./ProjectModal";
 
 function ProjectsSection() {
@@ -26,7 +27,22 @@ function ProjectsSection() {
             <p>{project.description}</p>
             <ul className="tag-list">
               {project.techStack.map((tech) => (
-                <li key={tech}>{tech}</li>
+                <li key={tech} className="tag-item">
+                  {techIcons[tech] ? (
+                    <>
+                      <img
+                        className="tag-icon"
+                        src={techIcons[tech]}
+                        alt=""
+                        aria-hidden="true"
+                        loading="lazy"
+                      />
+                      <span>{tech}</span>
+                    </>
+                  ) : (
+                    <span>{tech}</span>
+                  )}
+                </li>
               ))}
             </ul>
             <button
