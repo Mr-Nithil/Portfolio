@@ -22,6 +22,9 @@ export const techIcons = {
   Firebase:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   "Cloud Firestore": "https://img.icons8.com/color/48/fire-element.png",
+  Provider: "https://img.icons8.com/color/48/data-configuration.png",
+  "Mobile Scanner": "https://img.icons8.com/color/48/qr-code--v1.png",
+  SharedPreferences: "https://img.icons8.com/color/48/save.png",
   "QR Scanner": "https://img.icons8.com/color/48/qr-code--v1.png",
   "Firebase Authentication":
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",

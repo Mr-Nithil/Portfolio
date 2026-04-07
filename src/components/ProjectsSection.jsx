@@ -14,46 +14,58 @@ function ProjectsSection() {
       </div>
 
       <div className="projects-grid">
-        {projects.map((project) => (
-          <article className="project-card" key={project.id}>
-            <div className="project-preview">
-              <img
-                src={project.images[0]}
-                alt={`${project.title} cover`}
-                loading="lazy"
-              />
-            </div>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <ul className="tag-list">
-              {project.techStack.map((tech) => (
-                <li key={tech} className="tag-item">
-                  {techIcons[tech] ? (
-                    <>
-                      <img
-                        className="tag-icon"
-                        src={techIcons[tech]}
-                        alt=""
-                        aria-hidden="true"
-                        loading="lazy"
-                      />
-                      <span>{tech}</span>
-                    </>
-                  ) : (
-                    <span>{tech}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-            <button
-              type="button"
-              className="btn ghost"
-              onClick={() => setSelectedProject(project)}
-            >
-              View Details
-            </button>
-          </article>
-        ))}
+        {projects.map((project) => {
+          const previewTech = project.techStack.slice(0, 6);
+          const extraTechCount = project.techStack.length - previewTech.length;
+
+          return (
+            <article className="project-card" key={project.id}>
+              <div className="project-preview">
+                <img
+                  src={project.images[0]}
+                  alt={`${project.title} cover`}
+                  loading="lazy"
+                />
+              </div>
+              <div className="project-card-body">
+                <h3 className="project-card-title">{project.title}</h3>
+                <p className="project-card-summary">{project.description}</p>
+              </div>
+              <ul className="tag-list project-card-stack">
+                {previewTech.map((tech) => (
+                  <li key={tech} className="tag-item project-card-chip">
+                    {techIcons[tech] ? (
+                      <>
+                        <img
+                          className="tag-icon project-card-chip-icon"
+                          src={techIcons[tech]}
+                          alt=""
+                          aria-hidden="true"
+                          loading="lazy"
+                        />
+                        <span className="project-card-chip-name">{tech}</span>
+                      </>
+                    ) : (
+                      <span className="project-card-chip-name">{tech}</span>
+                    )}
+                  </li>
+                ))}
+                {extraTechCount > 0 && (
+                  <li className="tag-item project-card-chip project-card-chip-more">
+                    +{extraTechCount} more
+                  </li>
+                )}
+              </ul>
+              <button
+                type="button"
+                className="btn ghost project-card-action"
+                onClick={() => setSelectedProject(project)}
+              >
+                View Details
+              </button>
+            </article>
+          );
+        })}
       </div>
 
       {selectedProject && (
