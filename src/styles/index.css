@@ -2181,15 +2181,26 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .hero-layout {
+    grid-template-areas:
+      "hero-media"
+      "hero-content";
+  }
+
+  .hero-media {
+    grid-area: hero-media;
+    max-width: 280px;
+    margin-inline: auto;
+  }
+
+  .hero-content {
+    grid-area: hero-content;
+  }
+
   .about-closing {
     text-align: left;
     text-wrap: pretty;
     word-spacing: normal;
-  }
-
-  .hero-media {
-    max-width: 220px;
-    margin-inline: auto;
   }
 
   .hero {
@@ -2276,12 +2287,38 @@ textarea:focus {
       "copy"
       "actions";
     align-items: start;
+    justify-items: center;
   }
 
   .publication-thumb-btn,
   .certificate-thumb-btn {
     width: min(180px, 100%);
     align-self: start;
+    justify-self: center;
+  }
+
+  .publication-copy,
+  .certificate-copy {
+    width: 100%;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .publication-actions,
+  .certification-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .publication-actions .btn,
+  .certification-actions .btn {
+    width: min(100%, 240px);
+  }
+
+  .credential-link {
+    width: fit-content;
+    justify-content: center;
+    margin-inline: auto;
   }
 
   .leadership-role-row {
