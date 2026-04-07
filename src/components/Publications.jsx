@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 const publications = [
   {
@@ -25,7 +26,12 @@ function Publications() {
     };
 
     window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "";
+    };
   }, [activePublication]);
 
   return (
@@ -86,53 +92,57 @@ function Publications() {
         ))}
       </ul>
 
-      {activePublication ? (
-        <div
-          className="paper-viewer-overlay"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${activePublication.paperTitle} paper preview`}
-          onClick={() => setActivePublication(null)}
-        >
-          <div
-            className="paper-viewer"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="paper-viewer-header">
-              <h3>{activePublication.paperTitle}</h3>
-              <button
-                type="button"
-                className="modal-close"
-                onClick={() => setActivePublication(null)}
+      {activePublication && typeof document !== "undefined"
+        ? createPortal(
+            <div
+              className="paper-viewer-overlay"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${activePublication.paperTitle} paper preview`}
+              onClick={() => setActivePublication(null)}
+            >
+              <div
+                className="paper-viewer"
+                onClick={(event) => event.stopPropagation()}
               >
-                Close
-              </button>
-            </div>
-            <iframe
-              src={activePublication.paperPath}
-              title={`${activePublication.paperTitle} preview`}
-              className="paper-viewer-frame"
-            />
-            <div className="paper-viewer-actions">
-              <a
-                className="btn ghost"
-                href={activePublication.paperPath}
-                download
-              >
-                Download Paper
-              </a>
-              <a
-                className="btn ghost"
-                href={activePublication.paperPath}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open in New Tab
-              </a>
-            </div>
-          </div>
-        </div>
-      ) : null}
+                <div className="paper-viewer-header">
+                  <h3>{activePublication.paperTitle}</h3>
+                  <button
+                    type="button"
+                    className="modal-close"
+                    onClick={() => setActivePublication(null)}
+                  >
+                    Close
+                  </button>
+                </div>
+                <iframe
+                  key={activePublication.paperPath}
+                  src={activePublication.paperPath}
+                  title={`${activePublication.paperTitle} preview`}
+                  className="paper-viewer-frame"
+                />
+                <div className="paper-viewer-actions">
+                  <a
+                    className="btn ghost"
+                    href={activePublication.paperPath}
+                    download
+                  >
+                    Download Paper
+                  </a>
+                  <a
+                    className="btn ghost"
+                    href={activePublication.paperPath}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open in New Tab
+                  </a>
+                </div>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </section>
   );
 }

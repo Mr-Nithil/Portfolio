@@ -1093,7 +1093,7 @@ h1 span {
 .paper-viewer-overlay {
   position: fixed;
   inset: 0;
-  padding: 1rem;
+  padding: clamp(0.35rem, 1.2vw, 0.7rem);
   background: rgba(5, 9, 14, 0.72);
   backdrop-filter: blur(7px);
   display: grid;
@@ -1103,15 +1103,17 @@ h1 span {
 }
 
 .paper-viewer {
-  width: min(980px, 96vw);
-  max-height: 92vh;
-  overflow: auto;
+  width: min(1320px, 100%);
+  height: min(97dvh, 1080px);
+  max-height: 97dvh;
+  overflow: hidden;
   border-radius: 1rem;
   border: 1px solid var(--line);
   background: var(--surface-strong);
   box-shadow: var(--shadow);
   padding: 1rem;
   display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
   gap: 0.8rem;
 }
 
@@ -1124,7 +1126,8 @@ h1 span {
 
 .paper-viewer-frame {
   width: 100%;
-  height: min(70vh, 760px);
+  height: 100%;
+  min-height: 420px;
   border: 1px solid var(--line);
   border-radius: 0.8rem;
   background: var(--bg-soft);
@@ -1626,6 +1629,9 @@ textarea:focus {
   }
 
   .paper-viewer {
+    width: 100%;
+    height: calc(100dvh - 0.7rem);
+    max-height: calc(100dvh - 0.7rem);
     padding: 0.8rem;
   }
 
@@ -1664,7 +1670,7 @@ textarea:focus {
   }
 
   .paper-viewer-frame {
-    height: min(62vh, 620px);
+    min-height: 0;
   }
 
   .certificate-preview-image {
