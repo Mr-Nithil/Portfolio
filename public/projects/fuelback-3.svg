@@ -1,0 +1,12 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="28" fill="#0D1521"/>
+  <rect x="76" y="72" width="1128" height="576" rx="24" fill="#17273A"/>
+  <rect x="132" y="130" width="336" height="460" rx="24" fill="#0E1622" stroke="#2E4561"/>
+  <rect x="168" y="164" width="264" height="236" rx="16" fill="#58D5B2" fill-opacity="0.2"/>
+  <rect x="168" y="426" width="264" height="20" rx="10" fill="#29445F"/>
+  <rect x="168" y="458" width="210" height="20" rx="10" fill="#29445F"/>
+  <rect x="522" y="152" width="622" height="176" rx="18" fill="#1E344E"/>
+  <rect x="522" y="352" width="300" height="238" rx="18" fill="#20384F"/>
+  <rect x="844" y="352" width="300" height="238" rx="18" fill="#20384F"/>
+  <text x="522" y="126" fill="#B7C6D8" font-size="34" font-family="Arial, sans-serif">Offline-ready Delivery Workflow</text>
+</svg>

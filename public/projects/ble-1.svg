@@ -1,0 +1,12 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="28" fill="#0D141E"/>
+  <rect x="72" y="64" width="1136" height="592" rx="24" fill="#17283A"/>
+  <rect x="122" y="118" width="346" height="484" rx="24" fill="#0F1826" stroke="#2D435F"/>
+  <rect x="168" y="164" width="254" height="254" rx="18" fill="#253A56"/>
+  <path d="M294 214L242 266L292 316L294 286L338 332L340 300L298 258L340 216L338 184L294 230L292 214Z" fill="#58D5B2"/>
+  <rect x="532" y="158" width="602" height="82" rx="14" fill="#213A55"/>
+  <rect x="532" y="270" width="602" height="82" rx="14" fill="#213A55"/>
+  <rect x="532" y="382" width="602" height="82" rx="14" fill="#213A55"/>
+  <rect x="532" y="494" width="286" height="82" rx="14" fill="#58D5B2"/>
+  <text x="532" y="128" fill="#B9C8D9" font-size="34" font-family="Arial, sans-serif">Bluetooth Field Tools</text>
+</svg>

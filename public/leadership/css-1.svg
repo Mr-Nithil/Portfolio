@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Catholic Students Society moment one">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#27415a"/>
+      <stop offset="100%" stop-color="#476f6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <rect x="70" y="70" width="1060" height="560" rx="22" fill="rgba(255,255,255,0.1)"/>
+  <text x="120" y="210" fill="#eff9ff" font-size="40" font-family="Manrope, sans-serif" font-weight="700">Catholic Students' Society, UOR</text>
+  <text x="120" y="275" fill="#d8f0ff" font-size="27" font-family="Manrope, sans-serif">Engineering Faculty Coordinator</text>
+  <text x="120" y="340" fill="#ffffff" font-size="23" font-family="Manrope, sans-serif">Sep 2022 - Oct 2023</text>
+</svg>

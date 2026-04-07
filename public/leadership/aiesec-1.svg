@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="AIESEC leadership moment one">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e2a5e"/>
+      <stop offset="100%" stop-color="#3a4fb2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <text x="90" y="180" fill="#eef3ff" font-size="44" font-family="Manrope, sans-serif" font-weight="700">AIESEC in University of Ruhuna</text>
+  <text x="90" y="248" fill="#d9e4ff" font-size="28" font-family="Manrope, sans-serif">Leadership Across PR, Events, Delegates and IGT</text>
+  <rect x="90" y="300" width="1020" height="250" rx="20" fill="rgba(255,255,255,0.12)"/>
+</svg>
