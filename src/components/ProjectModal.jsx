@@ -37,25 +37,11 @@ function ProjectModal({ project, onClose }) {
     return null;
   }
 
-  const descriptionPoints = (
-    project.fullDescriptionPoints && project.fullDescriptionPoints.length > 0
-      ? project.fullDescriptionPoints
-      : project.fullDescription
-          .split(". ")
-          .map((point) => point.trim())
-          .filter(Boolean)
-          .map((point) =>
-            point.endsWith(".") || point.endsWith("!") || point.endsWith("?")
-              ? point
-              : `${point}.`,
-          )
-  ).slice(0, 8);
-
   const overview = project.overview || project.description;
   const keyHighlights =
     project.keyFeatures && project.keyFeatures.length > 0
       ? project.keyFeatures
-      : descriptionPoints;
+      : ["Key feature details can be added here later."];
   const technicalImplementation =
     project.techStackDetails && project.techStackDetails.length > 0
       ? project.techStackDetails

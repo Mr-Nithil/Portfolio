@@ -4,39 +4,51 @@ const projectData = [
     year: 2026,
     title: "Flutter Full Stack Blog App",
     description:
-      "A scalable blog platform built with Flutter and Clean Architecture, with real-time data handling and offline capabilities.",
-    fullDescription:
-      "Developed as an individual project using Clean Architecture with Presentation, Domain, and Data layers to ensure maintainability and testability. Implemented authentication, blog creation, image uploads, and real-time data synchronization using Supabase. Applied Bloc for state management and GetIt for dependency injection to achieve a modular architecture. Integrated offline capabilities using Hive and optimized data synchronization with network state handling. Designed reusable Material and Cupertino UI components ensuring pixel-perfect rendering and a consistent user experience across screens.",
-    techStack: ["Flutter", "Dart", "Supabase", "Bloc/Cubit", "get_it", "Hive"],
+      "A production-ready blogging platform utilizing Clean Architecture and Supabase for real-time synchronization and offline persistence.",
+    techStack: [
+      "Flutter",
+      "Dart",
+      "Supabase",
+      "Bloc/Cubit",
+      "get_it",
+      "Hive",
+      "Fpdart",
+    ],
     images: [
       "projects/fuelback-1.svg",
+
       "projects/fuelback-2.svg",
+
       "projects/fuelback-3.svg",
     ],
     overview:
-      "A scalable Flutter blog platform built with Clean Architecture, focused on maintainability, offline readiness, and real-time content synchronization.",
+      "A scalable Flutter application built with a focus on SOLID principles and a layered architecture. It features a complete authentication system, blog management with image uploads, and a robust offline-first approach using local caching.",
     keyFeatures: [
-      "Secure authentication and session-aware blog workflows.",
-      "Create, edit, and publish blog posts with image upload support.",
-      "Real-time data synchronization with responsive feed refresh behavior.",
-      "Offline-friendly user experience with local persistence fallback.",
-      "Reusable UI components with consistent Material and Cupertino styling.",
+      "Clean Architecture implementation with dedicated Data, Domain, and Presentation layers.",
+      "Secure Email/Password authentication integrated with Supabase Auth and persistent session management.",
+      "Dynamic blog creation with multi-part form handling and Supabase Storage for high-quality image hosting.",
+      "Automated 'Reading Time' estimation using RegEx and custom date formatting with the Intl package.",
+      "Connection-aware state management that seamlessly toggles between remote Supabase data and local Hive storage.",
+      "Pixel-perfect UI designed with Material and Cupertino components for a native cross-platform feel.",
     ],
     techStackDetails: [
-      "Flutter and Dart for cross-platform mobile UI and interaction layers.",
-      "Supabase for authentication, storage, and real-time data operations.",
-      "Bloc/Cubit for predictable state management and UI state transitions.",
-      "get_it for dependency injection and modular service wiring.",
-      "Hive for local caching, draft persistence, and offline access patterns.",
+      "Flutter & Dart: Framework used for building the high-performance cross-platform UI.",
+      "Supabase: Utilized as a backend-as-a-service for PostgreSQL database, Auth, and Storage.",
+      "Bloc/Cubit: Employed for predictable, event-driven state management across the application.",
+      "Get_it: Implemented as a service locator for Dependency Injection to decouple layers and improve testability.",
+      "Hive: A lightweight NoSQL database used for local caching and offline data persistence.",
+      "Fpdart: Integrated functional programming patterns like 'Either' for robust, type-safe error handling.",
     ],
     architecturePoints: [
-      "Organized into Presentation, Domain, and Data layers using Clean Architecture.",
-      "Feature modules communicate via use-cases and repository contracts.",
-      "Service abstractions keep state, storage, and network responsibilities isolated.",
+      "Applied the Dependency Inversion Principle by depending on interfaces rather than concrete implementations.",
+      "Strict separation of concerns: The Domain layer remains independent of external frameworks like Supabase or Hive.",
+      "Repository Pattern: Abstracted data sources to allow the UI to remain agnostic of where the data originates.",
+      "Use Case Driven: Business logic is encapsulated into discrete Use Cases for modularity and easier debugging.",
     ],
     additionalInfoPoints: [
-      "Built as an individual project to practice scalable Flutter architecture patterns.",
-      "Prioritized testability and long-term maintainability for future feature growth.",
+      "Optimized user experience by implementing 'Loading' and 'Failure' states for all asynchronous operations.",
+      "Integrated internet connection checking to prevent app crashes and provide informative offline feedback.",
+      "Follows strict clean coding standards and best practices for enterprise-grade mobile development.",
     ],
     github: "https://github.com/Mr-Nithil/blog_app",
     demo: "",
@@ -46,18 +58,16 @@ const projectData = [
     year: 2026,
     title: "Task Manager Full Stack Application",
     description:
-      "An ongoing full-stack task management system with Flutter mobile and React web clients backed by clean REST APIs.",
-    fullDescription:
-      "Designed and implemented a full-stack task management system with both Flutter mobile and React web clients. Built scalable RESTful APIs using Clean Architecture with Repository and Service patterns. Implemented JWT-based authentication and role-based authorization for Admin and User roles. Integrated PostgreSQL with Entity Framework Core including DTO mapping and validation. Developed Flutter UI components and integrated APIs for a seamless task management experience. Containerized all services using Docker and Docker Compose for consistent deployment.",
+      "An ongoing full-stack task management system with Flutter mobile and React web clients, powered by a production-ready .NET API backend.",
     techStack: [
       "Flutter",
       "React",
       "C#",
       ".NET Core",
-      "EF Core",
       "PostgreSQL",
       "AutoMapper",
       "Docker",
+      "EF Core",
       "JWT",
     ],
     images: [
@@ -66,30 +76,31 @@ const projectData = [
       "projects/qrpay-3.svg",
     ],
     overview:
-      "A full-stack task management platform with Flutter mobile and React web clients, backed by secure and scalable REST APIs.",
+      "A full-stack task management platform in active development, with a secure ASP.NET Core backend already implemented and Flutter/React clients in progress.",
     keyFeatures: [
-      "Role-based access control supporting Admin and User workflows.",
-      "Task lifecycle management with assignment, tracking, and status updates.",
-      "Cross-client consistency between mobile and web user flows.",
-      "JWT-based authentication for secure API access.",
-      "Containerized development and deployment setup with Docker.",
+      "JWT authentication and authorization with ASP.NET Identity.",
+      "Role-based access control for Admin and User workflows.",
+      "Task management APIs with create, update, delete, get, and completion toggle operations.",
+      "Admin capabilities for user management, task oversight, and account status control.",
+      "Input validation for task data (including due-date validation) and centralized exception handling.",
+      "Dockerized backend with PostgreSQL orchestration using Docker Compose.",
     ],
     techStackDetails: [
-      "Flutter for mobile task workflows and on-the-go productivity.",
-      "React for browser-based dashboard and management views.",
-      "C# and .NET Core for backend APIs and business logic layers.",
-      "Entity Framework Core with PostgreSQL for relational persistence.",
-      "AutoMapper for DTO and domain mapping consistency.",
-      "Docker for reproducible environments across services.",
+      "Flutter for mobile task workflows (ongoing client implementation).",
+      "React for web dashboard and management views (ongoing client implementation).",
+      "C# and .NET Core Web API for business logic, authentication, and endpoint design.",
+      "Entity Framework Core with PostgreSQL for relational data persistence and migrations.",
+      "AutoMapper for clean DTO-to-entity mapping across service boundaries.",
+      "Docker and Docker Compose for reproducible local development and deployment setup.",
     ],
     architecturePoints: [
-      "Backend follows layered architecture with service and repository abstractions.",
-      "Shared API contracts align behavior across Flutter and React clients.",
-      "Security, validation, and data access are separated for maintainability.",
+      "Layered backend design using Repository + Service pattern for separation of concerns.",
+      "DTO-driven API contracts and mapping profiles for maintainable request/response handling.",
+      "Security, validation, and error handling are implemented as dedicated cross-cutting concerns.",
     ],
     additionalInfoPoints: [
-      "Project is actively evolving with planned feature expansions.",
-      "Designed to scale to multi-role team collaboration use cases.",
+      "Project is ongoing, with frontend clients actively being developed in Flutter and React.",
+      "Current implementation emphasizes scalable backend foundations for future feature expansion.",
     ],
     github: "https://github.com/Mr-Nithil/Task-Manager-WebApp",
     demo: "",
@@ -100,8 +111,6 @@ const projectData = [
     title: "Railway Ticket Verification System with Fraud Detection",
     description:
       "A production-oriented mobile system enabling railway inspectors to verify tickets via QR scanning with real-time validation, fraud detection, and full audit traceability.",
-    fullDescription:
-      "Developed a robust Flutter-based mobile application designed for railway inspectors to streamline ticket verification workflows in real-world operational environments. The system enables fast and reliable QR-based ticket validation with both real-time backend verification and offline-friendly capabilities.\n\nIntegrated Firebase Authentication and Cloud Firestore for secure checker identity management, while leveraging PostgreSQL for handling large-scale booking, passenger, and schedule datasets. Implemented a fraud detection layer that evaluates ticket validity against schedule mismatches, duplicate usage, and abnormal verification patterns, presenting clear status indicators (Valid, Rejected, Fraud, Pending) for quick decision-making.\n\nEngineered a complete verification lifecycle including approval/rejection actions, checker remarks, timestamps, and persistent verification history to ensure accountability and audit readiness. Special focus was given to error handling, permission management, and responsive UI design to support field conditions with limited connectivity.\n\nThe project was developed as part of final year research and contributed to an IEEE LATINCOM 2025 publication on explainable anomaly detection using LLMs.",
     techStack: [
       "Flutter",
       "Dart",
@@ -163,8 +172,6 @@ const projectData = [
     title: "Safety Companion Mobile App",
     description:
       "A personal safety app with SOS-focused features, live location sharing, and emergency discovery capabilities.",
-    fullDescription:
-      "Built as an individual project featuring Firebase Authentication and Cloud Firestore for secure user data management. Developed 4 core features: live location sharing, emergency calling, safety tips and educational content, and nearby emergency place discovery. Designed responsive UIs using Material components, translating feature requirements into functional and user-friendly screens.",
     techStack: [
       "Flutter",
       "Dart",
@@ -206,8 +213,6 @@ const projectData = [
     title: "Stall Reservation Management System",
     description:
       "A multi-tenant stall reservation platform for the Colombo International Book Fair, built on a microservices architecture.",
-    fullDescription:
-      "Designed and built as a group project for the Colombo International Book Fair. Architected a microservices system with an API Gateway and four independent services: Auth, Reservation, Stall, and Notification. Implemented JWT-based authentication and role-based authorization across services. Developed scalable backend services with strong separation of concerns and containerized all services using Docker Compose for orchestration.",
     techStack: [
       "Node.js",
       "Express.js",
@@ -257,8 +262,6 @@ const projectData = [
     title: "ERP System – Academic Portal",
     description:
       "The Academic Portal module of a faculty-wide ERP system, managing academic tasks and student-teacher workflows.",
-    fullDescription:
-      "Developed the Academic Portal as part of a larger group project building a 5-portal Faculty ERP system. Implemented the Request Management service with RESTful API endpoints handling student-teacher communication, batch management, and staff coordination workflows. Architected the data access layer using Repository and Unit of Work patterns with Entity Framework Core, implementing 6 domain repositories (Student, Teacher, Batch, StudentRequest, TeacherRequest, StaffRequest) to ensure separation of concerns and testability.",
     techStack: [
       "C#",
       "ASP.NET Core",

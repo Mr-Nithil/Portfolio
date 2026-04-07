@@ -5,6 +5,8 @@ export const techIcons = {
   Supabase:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
   "Bloc/Cubit": "stack-icons/bloc.png",
+  FPdart:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
   get_it: "https://img.icons8.com/color/48/workflow.png",
   Hive: "https://www.vectorlogo.zone/logos/apache_hive/apache_hive-icon.svg",
   React:
@@ -12,7 +14,8 @@ export const techIcons = {
   "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
   ".NET Core":
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
-  "EF Core": "https://img.icons8.com/color/48/database-administrator.png",
+  "EF Core":
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
   PostgreSQL:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
   AutoMapper: "https://img.icons8.com/color/48/sorting-options.png",
