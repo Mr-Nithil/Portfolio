@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 const leadershipOrganizations = [
   {
@@ -290,10 +291,12 @@ function LeadershipVolunteering() {
       }
     };
 
-    document.addEventListener("keydown", handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
 
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
     };
   }, [activeGallery]);
 
@@ -318,66 +321,70 @@ function LeadershipVolunteering() {
         ))}
       </div>
 
-      {activeGallery ? (
-        <div
-          className="paper-viewer-overlay"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${activeGallery.organization} gallery`}
-          onClick={closeGallery}
-        >
-          <div
-            className="paper-viewer leadership-gallery-modal"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="paper-viewer-header">
-              <h3>{activeGallery.organization}</h3>
-              <button
-                type="button"
-                className="modal-close"
-                onClick={closeGallery}
+      {activeGallery && typeof document !== "undefined"
+        ? createPortal(
+            <div
+              className="paper-viewer-overlay"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${activeGallery.organization} gallery`}
+              onClick={closeGallery}
+            >
+              <div
+                className="paper-viewer leadership-gallery-modal"
+                onClick={(event) => event.stopPropagation()}
               >
-                Close
-              </button>
-            </div>
+                <div className="paper-viewer-header">
+                  <h3>{activeGallery.organization}</h3>
+                  <button
+                    type="button"
+                    className="modal-close"
+                    onClick={closeGallery}
+                  >
+                    Close
+                  </button>
+                </div>
 
-            <p className="leadership-gallery-note">
-              Image {activeImageIndex + 1} of{" "}
-              {activeGallery.galleryImages.length}
-            </p>
+                <p className="leadership-gallery-note">
+                  Image {activeImageIndex + 1} of{" "}
+                  {activeGallery.galleryImages.length}
+                </p>
 
-            <div className="leadership-gallery-viewer">
-              <button
-                type="button"
-                className="leadership-gallery-nav"
-                onClick={showPreviousImage}
-                aria-label="Show previous image"
-              >
-                ◀
-              </button>
+                <div className="leadership-gallery-viewer">
+                  <button
+                    type="button"
+                    className="leadership-gallery-nav"
+                    onClick={showPreviousImage}
+                    aria-label="Show previous image"
+                  >
+                    ◀
+                  </button>
 
-              <figure className="leadership-gallery-stage">
-                <img
-                  src={encodeURI(activeImage)}
-                  alt={`${activeGallery.organization} image ${activeImageIndex + 1}`}
-                />
-                <figcaption>
-                  {activeImageIndex + 1} / {activeGallery.galleryImages.length}
-                </figcaption>
-              </figure>
+                  <figure className="leadership-gallery-stage">
+                    <img
+                      src={encodeURI(activeImage)}
+                      alt={`${activeGallery.organization} image ${activeImageIndex + 1}`}
+                    />
+                    <figcaption>
+                      {activeImageIndex + 1} /{" "}
+                      {activeGallery.galleryImages.length}
+                    </figcaption>
+                  </figure>
 
-              <button
-                type="button"
-                className="leadership-gallery-nav"
-                onClick={showNextImage}
-                aria-label="Show next image"
-              >
-                ▶
-              </button>
-            </div>
-          </div>
-        </div>
-      ) : null}
+                  <button
+                    type="button"
+                    className="leadership-gallery-nav"
+                    onClick={showNextImage}
+                    aria-label="Show next image"
+                  >
+                    ▶
+                  </button>
+                </div>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </section>
   );
 }
