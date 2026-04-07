@@ -8,7 +8,7 @@ const certifications = [
     credentialId: "6N5PADJ03NKE",
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/verify/6N5PADJ03NKE",
-    certificatePath: "/certifications/Tensorflow.jpeg",
+    certificatePath: "certifications/Tensorflow.jpeg",
   },
   {
     name: "Introduction to Android Mobile Application Development",
@@ -17,7 +17,7 @@ const certifications = [
     credentialId: "TQ6ODSDT0FTV",
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/verify/TQ6ODSDT0FTV?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
-    certificatePath: "/certifications/android.jpeg",
+    certificatePath: "certifications/android.jpeg",
   },
   {
     name: "Supervised Machine Learning: Regression and Classification",
@@ -26,7 +26,7 @@ const certifications = [
     credentialId: "G5LZEGV62RZX",
     credentialUrl:
       "https://www.coursera.org/account/accomplishments/verify/G5LZEGV62RZX",
-    certificatePath: "/certifications/supervised%20ml.jpeg",
+    certificatePath: "certifications/supervised%20ml.jpeg",
   },
 ];
 

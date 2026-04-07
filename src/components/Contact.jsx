@@ -111,7 +111,7 @@ function Contact() {
               Get in touch
             </a>
 
-            <a className="btn secondary" href="/Nithil_Sheshan_CV.pdf" download>
+            <a className="btn secondary" href="Nithil_Sheshan_CV.pdf" download>
               Download CV
             </a>
           </div>

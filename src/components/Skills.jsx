@@ -99,8 +99,8 @@ const skillLogos = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
   "Material Design": "https://img.icons8.com/color/48/material-ui.png",
   Cupertino: "https://img.icons8.com/color/48/ios-logo.png",
-  Bloc: "/stack-icons/bloc.png",
-  Riverpod: "/stack-icons/riverpod.png",
+  Bloc: "stack-icons/bloc.png",
+  Riverpod: "stack-icons/riverpod.png",
   Provider: "https://img.icons8.com/color/48/data-configuration.png",
   "Jetpack Compose":
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jetpackcompose/jetpackcompose-original.svg",
@@ -190,7 +190,7 @@ const skillLogos = {
   Cursor: "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/cursor.svg",
   "GitHub Copilot":
     "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/githubcopilot.svg",
-  Antigravity: "/stack-icons/antigravity-color.png",
+  Antigravity: "stack-icons/antigravity-color.png",
   Figma:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   "Adobe XD": "https://api.iconify.design/logos:adobe-xd.svg",

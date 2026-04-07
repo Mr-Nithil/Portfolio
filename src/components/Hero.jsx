@@ -3,27 +3,27 @@ import aboutPic from "../assets/about_pic.jpg";
 const platformBadges = [
   {
     label: "Android",
-    src: "/mobile-engineering-portfolio/android.png",
+    src: "mobile-engineering-portfolio/android.png",
     alt: "Android",
   },
   {
     label: "iOS",
-    src: "/mobile-engineering-portfolio/apple-logo.png",
+    src: "mobile-engineering-portfolio/apple-logo.png",
     alt: "Apple iOS",
   },
   {
     label: "Flutter",
-    src: "/mobile-engineering-portfolio/icon_flutter.png",
+    src: "mobile-engineering-portfolio/icon_flutter.png",
     alt: "Flutter",
   },
   {
     label: "Kotlin",
-    src: "/mobile-engineering-portfolio/Kotlin icon.png",
+    src: "mobile-engineering-portfolio/Kotlin icon.png",
     alt: "Kotlin",
   },
   {
     label: "React Native",
-    src: "/mobile-engineering-portfolio/React_Native_idNPBI6-rm_0.png",
+    src: "mobile-engineering-portfolio/React_Native_idNPBI6-rm_0.png",
     alt: "React Native",
   },
 ];
@@ -60,7 +60,7 @@ function Hero() {
             </a>
             <a
               className="btn ghost"
-              href="/Nithil_Sheshan_Mobile_Engineer_CV.pdf"
+              href="Nithil_Sheshan_Mobile_Engineer_CV.pdf"
               download
             >
               Download CV

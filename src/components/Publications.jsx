@@ -6,7 +6,7 @@ const publications = [
     conferenceDates: "5-7 November 2025",
     paperTitle:
       "AE-RAGX: Combining Autoencoders with Retrieval-Augmented Generation for Explainable Anomaly Detection using LLMs",
-    paperPath: "/conf-paper/a23-perera%20final.pdf",
+    paperPath: "conf-paper/a23-perera%20final.pdf",
   },
 ];
 
