@@ -45,7 +45,7 @@ export const techIcons = {
   "ASP.NET Core":
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
   "Entity Framework Core":
-    "https://img.icons8.com/color/48/database-administrator.png",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
   SQLite:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
   xUnit: "https://img.icons8.com/color/48/test-tube.png",
