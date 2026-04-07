@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="IEEE leadership moment one">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#123f6b"/>
+      <stop offset="100%" stop-color="#1f5ca0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <path d="M0 540 C260 470 490 620 760 530 C940 470 1070 520 1200 480 L1200 700 L0 700 Z" fill="rgba(255,255,255,0.12)"/>
+  <text x="90" y="180" fill="#ecf6ff" font-size="42" font-family="Manrope, sans-serif" font-weight="700">IEEE Computer Society UOR</text>
+  <text x="90" y="245" fill="#dbedff" font-size="28" font-family="Manrope, sans-serif">AXIOM 2023 | Organizing Committee Co Chairman</text>
+</svg>

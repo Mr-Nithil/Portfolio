@@ -1,0 +1,11 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="28" fill="#0B111A"/>
+  <rect x="72" y="64" width="1136" height="592" rx="24" fill="#172839"/>
+  <circle cx="274" cy="360" r="180" fill="#58D5B2" fill-opacity="0.2"/>
+  <circle cx="274" cy="360" r="122" stroke="#58D5B2" stroke-width="2"/>
+  <rect x="500" y="154" width="634" height="82" rx="14" fill="#263A56"/>
+  <rect x="500" y="266" width="634" height="82" rx="14" fill="#263A56"/>
+  <rect x="500" y="378" width="634" height="82" rx="14" fill="#263A56"/>
+  <rect x="500" y="490" width="320" height="82" rx="14" fill="#58D5B2"/>
+  <text x="500" y="126" fill="#B9C8D9" font-size="34" font-family="Arial, sans-serif">Secure Scan-to-Pay Experience</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Catholic Students Society moment two">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a324d"/>
+      <stop offset="100%" stop-color="#2f5e6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg)"/>
+  <circle cx="260" cy="180" r="120" fill="rgba(255,255,255,0.12)"/>
+  <text x="90" y="320" fill="#ecf7ff" font-size="36" font-family="Manrope, sans-serif" font-weight="700">Cross-Faculty Student Engagement</text>
+  <text x="90" y="380" fill="#d3eaff" font-size="24" font-family="Manrope, sans-serif">Catholic Students' Society</text>
+</svg>
