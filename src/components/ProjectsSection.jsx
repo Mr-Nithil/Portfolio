@@ -10,7 +10,7 @@ function ProjectsSection() {
     <section id="projects" className="section reveal">
       <div className="section-title-wrap">
         <p className="eyebrow">Projects</p>
-        <h2>Selected mobile and platform work</h2>
+        <h2>Featured Mobile and Platform Projects</h2>
       </div>
 
       <div className="projects-grid">

@@ -202,7 +202,7 @@ function Skills() {
     <section id="skills" className="section reveal">
       <div className="section-title-wrap">
         <p className="eyebrow">Technical Skills</p>
-        <h2>Core technologies and engineering capabilities</h2>
+        <h2>Engineering Skills Across Mobile, Backend, and Cloud</h2>
       </div>
 
       <div className="skills-grid">

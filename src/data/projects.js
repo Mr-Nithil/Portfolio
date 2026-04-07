@@ -2,7 +2,7 @@ const projectData = [
   {
     id: "flutter-fullstack-blog",
     year: 2026,
-    title: "Flutter Full Stack Blog App",
+    title: "Full Stack Mobile Blog App",
     description:
       "A production-ready blogging platform utilizing Clean Architecture and Supabase for real-time synchronization and offline persistence.",
     techStack: [
@@ -108,7 +108,7 @@ const projectData = [
   {
     id: "railway-ticket-verification",
     year: 2025,
-    title: "Railway Ticket Verification System with Fraud Detection",
+    title: "Railway Ticket Verification Mobile App with Fraud Detection",
     description:
       "A production-oriented mobile system enabling railway inspectors to verify tickets via QR scanning with real-time validation, fraud detection, and full audit traceability.",
     techStack: [
