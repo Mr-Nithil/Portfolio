@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
 const certifications = [
   {
@@ -45,7 +46,12 @@ function Certifications() {
     };
 
     window.addEventListener("keydown", handleEscape);
-    return () => window.removeEventListener("keydown", handleEscape);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "";
+    };
   }, [activeCertificate]);
 
   return (
@@ -104,46 +110,49 @@ function Certifications() {
         ))}
       </ul>
 
-      {activeCertificate ? (
-        <div
-          className="paper-viewer-overlay"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${activeCertificate.name} certificate preview`}
-          onClick={() => setActiveCertificate(null)}
-        >
-          <div
-            className="paper-viewer"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="paper-viewer-header">
-              <h3>{activeCertificate.name}</h3>
-              <button
-                type="button"
-                className="modal-close"
-                onClick={() => setActiveCertificate(null)}
+      {activeCertificate && typeof document !== "undefined"
+        ? createPortal(
+            <div
+              className="paper-viewer-overlay"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${activeCertificate.name} certificate preview`}
+              onClick={() => setActiveCertificate(null)}
+            >
+              <div
+                className="paper-viewer"
+                onClick={(event) => event.stopPropagation()}
               >
-                Close
-              </button>
-            </div>
-            <img
-              src={activeCertificate.certificatePath}
-              alt={`${activeCertificate.name} certificate`}
-              className="certificate-preview-image"
-            />
-            <div className="paper-viewer-actions">
-              <a
-                className="btn ghost"
-                href={activeCertificate.certificatePath}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open in New Tab
-              </a>
-            </div>
-          </div>
-        </div>
-      ) : null}
+                <div className="paper-viewer-header">
+                  <h3>{activeCertificate.name}</h3>
+                  <button
+                    type="button"
+                    className="modal-close"
+                    onClick={() => setActiveCertificate(null)}
+                  >
+                    Close
+                  </button>
+                </div>
+                <img
+                  src={activeCertificate.certificatePath}
+                  alt={`${activeCertificate.name} certificate`}
+                  className="certificate-preview-image"
+                />
+                <div className="paper-viewer-actions">
+                  <a
+                    className="btn ghost"
+                    href={activeCertificate.certificatePath}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open in New Tab
+                  </a>
+                </div>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </section>
   );
 }
