@@ -1,31 +1,23 @@
-import { useState } from "react";
-
 function Contact() {
-  const [isSent, setIsSent] = useState(false);
-
-  const onSubmit = (event) => {
-    event.preventDefault();
-    setIsSent(true);
-  };
-
   return (
     <section id="contact" className="section reveal">
       <div className="section-title-wrap">
         <p className="eyebrow">Contact</p>
-        <h2>Let’s build something meaningful</h2>
+        <h2>Let’s build scalable mobile experiences that matter</h2>
       </div>
 
       <div className="contact-grid">
         <article className="contact-card">
           <div className="contact-card-head">
-            <p className="eyebrow">Direct contact</p>
+            <p className="eyebrow">Open for opportunities</p>
             <p className="contact-summary">
-              Open to Flutter mobile engineering roles and building scalable,
-              real-world applications.
+              Actively seeking Flutter and mobile engineering roles where I can
+              build scalable, high-impact applications used in real-world
+              environments.
             </p>
           </div>
 
-          <div className="contact-pills" aria-label="Contact highlights">
+          {/* <div className="contact-pills" aria-label="Contact highlights">
             <span>Flutter-focused</span>
             <span>Actively seeking opportunities</span>
             <span>Open to remote roles</span>
@@ -34,7 +26,7 @@ function Contact() {
             <span>Kotlin & Android</span>
             <span>Clean Architecture</span>
             <span>Scalable mobile apps</span>
-          </div>
+          </div> */}
 
           <ul className="link-list">
             <li className="contact-link location">
@@ -105,6 +97,52 @@ function Contact() {
               </div>
             </li>
           </ul>
+        </article>
+
+        <article className="contact-card contact-spotlight">
+          <div className="contact-spotlight-head">
+            <p className="eyebrow">Why work with me</p>
+            <h3>Engineering clarity, speed, and real-world impact</h3>
+            <p className="contact-summary">
+              I focus on building production-ready mobile apps with clean
+              architecture, scalable systems, and strong user experience.
+            </p>
+          </div>
+
+          <div className="contact-animation" aria-hidden="true">
+            <div className="contact-orbit contact-orbit-large">
+              <span />
+              <span />
+              <span />
+            </div>
+
+            <div className="contact-orbit contact-orbit-small">
+              <span />
+              <span />
+            </div>
+
+            <div className="contact-tiles">
+              <div className="contact-tile tile-primary">
+                <span className="tile-label">Availability</span>
+                <strong>Open for mobile engineering roles</strong>
+              </div>
+
+              <div className="contact-tile tile-secondary">
+                <span className="tile-label">Core Stack</span>
+                <strong>Flutter, Dart & Kotlin</strong>
+              </div>
+
+              <div className="contact-tile tile-tertiary">
+                <span className="tile-label">Architecture</span>
+                <strong>Clean Architecture, MVVM</strong>
+              </div>
+
+              <div className="contact-tile tile-tertiary">
+                <span className="tile-label">Focus</span>
+                <strong>Scalable, real-world mobile apps</strong>
+              </div>
+            </div>
+          </div>
 
           <div className="contact-actions">
             <a className="btn primary" href="mailto:nithil.sheshan@gmail.com">
@@ -116,25 +154,6 @@ function Contact() {
             </a>
           </div>
         </article>
-
-        <form className="contact-form" onSubmit={onSubmit}>
-          <label htmlFor="name">Name</label>
-          <input id="name" name="name" type="text" required />
-
-          <label htmlFor="email">Email</label>
-          <input id="email" name="email" type="email" required />
-
-          <label htmlFor="message">Message</label>
-          <textarea id="message" name="message" rows="4" required />
-
-          <button type="submit" className="btn primary">
-            Send Message
-          </button>
-
-          {isSent && (
-            <p className="form-note">Thanks. I will get back to you soon.</p>
-          )}
-        </form>
       </div>
     </section>
   );

@@ -1408,10 +1408,11 @@ h1 span {
 
 .contact-grid {
   grid-template-columns: 1fr 1.1fr;
-  align-items: start;
+  align-items: stretch;
 }
 
 .contact-card {
+  min-height: 100%;
   display: grid;
   gap: 1rem;
   background: var(--gradient-card), var(--surface-tinted);
@@ -1425,7 +1426,7 @@ h1 span {
 
 .contact-summary {
   margin: 0;
-  max-width: 44ch;
+  max-width: 60ch;
   color: var(--text-muted);
 }
 
@@ -1548,18 +1549,246 @@ h1 span {
 }
 
 .contact-actions .btn {
-  flex: 1 1 100%;
+  flex: 1 1 11rem;
   text-align: center;
 }
 
-.contact-form {
-  display: grid;
-  gap: 0.65rem;
-  align-content: start;
+.contact-spotlight {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.contact-form label {
-  margin-top: 0.15rem;
+.contact-spotlight-head {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact-animation {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: hidden;
+  min-height: 20rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(88, 213, 178, 0.18),
+      transparent 38%
+    ),
+    linear-gradient(180deg, rgba(12, 18, 28, 0.55), rgba(12, 18, 28, 0.2)),
+    color-mix(in srgb, var(--surface-strong) 80%, var(--accent-soft));
+}
+
+.contact-animation::before,
+.contact-animation::after {
+  content: "";
+  position: absolute;
+  inset: auto;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.contact-animation::before {
+  top: -4rem;
+  right: -2rem;
+  width: 12rem;
+  height: 12rem;
+  background: radial-gradient(circle, rgba(88, 213, 178, 0.3), transparent 68%);
+  animation: drift-slow 11s ease-in-out infinite;
+}
+
+.contact-animation::after {
+  left: -3rem;
+  bottom: -4rem;
+  width: 14rem;
+  height: 14rem;
+  background: radial-gradient(
+    circle,
+    rgba(63, 149, 255, 0.26),
+    transparent 70%
+  );
+  animation: drift-slow 14s ease-in-out infinite reverse;
+}
+
+.contact-orbit {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contact-orbit::before {
+  content: "";
+  position: absolute;
+  inset: 12% 14%;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--accent) 34%, transparent);
+}
+
+.contact-orbit-large {
+  animation: orbit-spin 28s linear infinite;
+}
+
+.contact-orbit-large span,
+.contact-orbit-small span {
+  position: absolute;
+  display: block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+.contact-orbit-large span:nth-child(1) {
+  top: 13%;
+  left: 56%;
+}
+
+.contact-orbit-large span:nth-child(2) {
+  right: 18%;
+  top: 47%;
+}
+
+.contact-orbit-large span:nth-child(3) {
+  left: 20%;
+  bottom: 18%;
+}
+
+.contact-orbit-small {
+  animation: orbit-spin 18s linear infinite reverse;
+}
+
+.contact-orbit-small::before {
+  inset: 24% 30%;
+  border-color: color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.contact-orbit-small span {
+  width: 0.55rem;
+  height: 0.55rem;
+  background: #ffffff;
+}
+
+.contact-orbit-small span:nth-child(1) {
+  top: 28%;
+  left: 34%;
+}
+
+.contact-orbit-small span:nth-child(2) {
+  right: 36%;
+  bottom: 28%;
+}
+
+/* ===== IMPROVED CONTACT ANIMATION LAYOUT ===== */
+
+.contact-tiles {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 1.45rem;
+}
+
+/* Base tile */
+.contact-tile {
+  position: absolute;
+  width: min(15.2rem, 66%);
+  padding: 0.68rem 0.78rem;
+  border: 1px solid var(--line);
+  border-radius: 0.95rem;
+  background: color-mix(in srgb, var(--surface-strong) 78%, var(--accent-soft));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 18px 40px rgba(2, 10, 20, 0.28);
+  animation: float-card 6.5s ease-in-out infinite;
+}
+
+/* ===== INDIVIDUAL TILE POSITIONS ===== */
+
+/* Top left */
+.contact-tile:nth-child(1) {
+  top: 9%;
+  left: 6%;
+  animation-delay: 0s;
+}
+
+/* Top right */
+.contact-tile:nth-child(2) {
+  top: 30%;
+  right: 11%;
+  animation-delay: -1.5s;
+}
+
+/* Mid left */
+.contact-tile:nth-child(3) {
+  top: 52%;
+  left: 12%;
+  right: auto;
+  transform: none;
+  animation-delay: -3s;
+}
+
+/* Bottom right */
+.contact-tile:nth-child(4) {
+  bottom: 8%;
+  right: 12%;
+  left: auto;
+  animation-delay: -2.2s;
+}
+
+.contact-tile:nth-child(1),
+.contact-tile:nth-child(4) {
+  width: min(18.4rem, 80%);
+}
+
+.contact-tile:nth-child(1) strong,
+.contact-tile:nth-child(4) strong {
+  white-space: nowrap;
+}
+
+/* Text */
+.contact-tile strong {
+  display: block;
+  margin-top: 0.16rem;
+  font-size: 0.88rem;
+  line-height: 1.28;
+}
+
+/* Label */
+.tile-label {
+  display: inline-block;
+  font-size: 0.64rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.contact-tile strong {
+  display: block;
+  margin-top: 0.16rem;
+  font-size: 0.88rem;
+  line-height: 1.28;
+}
+
+.contact-tile.tile-secondary {
+  justify-self: end;
+  animation-delay: -1.8s;
+}
+
+.contact-tile.tile-tertiary {
+  animation-delay: -3.4s;
+}
+
+.tile-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.contact-actions {
+  margin-top: auto;
 }
 
 label {
@@ -1590,10 +1819,39 @@ textarea:focus {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 14%, transparent);
 }
 
-.form-note {
-  margin: 0;
-  color: var(--accent);
-  font-size: 0.86rem;
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-card {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-3px) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1);
+  }
+  75% {
+    transform: translateY(-2px) scale(1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes drift-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0.7rem, -0.6rem, 0) scale(1.04);
+  }
 }
 
 .site-footer {
@@ -1743,7 +2001,8 @@ textarea:focus {
 
 .modal-content {
   margin-top: 1rem;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.9rem;
 }
 
@@ -1911,6 +2170,14 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  .contact-animation {
+    min-height: 17rem;
+  }
+
+  .contact-spotlight {
+    min-height: 0;
+  }
+
   .hero-layout {
     grid-template-columns: 1fr;
     align-items: start;
@@ -1991,6 +2258,41 @@ textarea:focus {
   .btn {
     width: 100%;
     text-align: center;
+  }
+
+  .contact-animation {
+    min-height: 18rem;
+  }
+
+  .contact-tiles {
+    padding: 0.8rem;
+  }
+
+  .contact-tile {
+    width: min(12.8rem, 90%);
+    padding: 0.62rem 0.7rem;
+  }
+
+  .contact-tile:nth-child(1) {
+    top: 6%;
+    left: 4%;
+  }
+
+  .contact-tile:nth-child(2) {
+    top: 24%;
+    right: 4%;
+  }
+
+  .contact-tile:nth-child(3) {
+    top: 50%;
+    left: 8%;
+    right: auto;
+  }
+
+  .contact-tile:nth-child(4) {
+    bottom: 6%;
+    right: 8%;
+    left: auto;
   }
 
   .modal {
