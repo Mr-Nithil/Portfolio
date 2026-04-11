@@ -8,6 +8,10 @@ The portfolio is built with React and Vite, and designed to be clean, responsive
 
 View the deployed site here: https://mr-nithil.github.io/Portfolio
 
+## Portfolio Preview
+
+![Portfolio Screenshot](./public/readme_screenshots/Portfolio.png)
+
 ## About Me
 
 I am a Mobile Engineer focused on Flutter development, cross-platform app architecture, and production-ready implementation. This portfolio is my central space to showcase real work, technical depth, and engineering growth.
