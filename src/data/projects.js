@@ -187,6 +187,7 @@ const projectData = [
       "Firebase Core",
     ],
     images: ["projects/ble-1.svg", "projects/ble-2.svg", "projects/ble-3.svg"],
+    selectionImage: "projects/mainimages/Safety%20Companion.png",
     overview:
       "Built an end-to-end personal safety companion application with Firebase-backed authentication and user profiles, enabling fast emergency actions, location-based assistance, and safety-awareness content for day-to-day risk situations.",
     keyFeatures: [
