@@ -233,7 +233,7 @@ const projectData = [
       "Includes safety education content and profile-centric personalization to improve day-to-day usability.",
     ],
     github: "https://github.com/Mr-Nithil/safety_companion",
-    demo: "",
+    demo: "https://www.linkedin.com/posts/nithil-sheshan-4a3945210_flutter-dart-firebase-activity-7448837171865759745-azzM?utm_source=share&utm_medium=member_desktop&rcm=ACoAADWIVHsBQyvJg7MFpZpjndpUXN6v4s4fnlE",
   },
   {
     id: "stall-reservation-system",
