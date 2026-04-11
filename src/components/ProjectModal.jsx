@@ -88,24 +88,37 @@ function ProjectModal({ project, onClose }) {
         aria-labelledby="project-title"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="modal-gallery">
-          <div className="modal-head-row">
-            <div>
-              <h3 id="project-title" className="modal-head-title">
-                {project.title}
-              </h3>
-              <p className="modal-project-year">Built in {project.year}</p>
-            </div>
-            <button
-              type="button"
-              className="modal-close"
-              onClick={onClose}
-              aria-label="Close project details"
-            >
-              Close
-            </button>
+        <div className="modal-head-row">
+          <div>
+            <h3 id="project-title" className="modal-head-title">
+              {project.title}
+            </h3>
+            <p className="modal-project-year">Built in {project.year}</p>
           </div>
+          <button
+            type="button"
+            className="modal-close"
+            onClick={onClose}
+            aria-label="Close project details"
+          >
+            <svg
+              className="modal-close-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="M6 6 18 18" />
+            </svg>
+          </button>
+        </div>
 
+        <div className="modal-gallery">
           <img
             src={project.images[activeIndex]}
             alt={`${project.title} preview ${activeIndex + 1}`}
@@ -126,7 +139,19 @@ function ProjectModal({ project, onClose }) {
                 onClick={previousImage}
                 aria-label="Previous image"
               >
-                Prev
+                <svg
+                  className="carousel-btn-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M15 6 9 12l6 6" />
+                </svg>
               </button>
               <button
                 type="button"
@@ -134,7 +159,19 @@ function ProjectModal({ project, onClose }) {
                 onClick={nextImage}
                 aria-label="Next image"
               >
-                Next
+                <svg
+                  className="carousel-btn-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
               </button>
             </>
           )}

@@ -17,12 +17,13 @@ function ProjectsSection() {
         {projects.map((project) => {
           const previewTech = project.techStack.slice(0, 6);
           const extraTechCount = project.techStack.length - previewTech.length;
+          const previewImage = project.selectionImage || project.images[0];
 
           return (
             <article className="project-card" key={project.id}>
               <div className="project-preview">
                 <img
-                  src={project.images[0]}
+                  src={previewImage}
                   alt={`${project.title} cover`}
                   loading="lazy"
                 />
