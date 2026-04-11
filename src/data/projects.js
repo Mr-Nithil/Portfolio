@@ -175,18 +175,28 @@ const projectData = [
   },
   {
     id: "safety-companion-app",
-    year: 2024,
+    year: 2026,
     title: "Safety Companion Mobile App",
     description:
       "A personal safety mobile app that combines SOS support, emergency calling, live location SMS sharing, and nearby essential-service discovery in a single user-friendly experience.",
     techStack: [
       "Flutter",
       "Dart",
-      "Firebase Authentication",
       "Cloud Firestore",
+      "Firebase Authentication",
       "Firebase Core",
+      "Geolocator",
+      "URL Launcher",
+      "Flutter Phone Direct Caller",
+      "WebView Flutter",
     ],
-    images: ["projects/ble-1.svg", "projects/ble-2.svg", "projects/ble-3.svg"],
+    images: [
+      "projects/mainimages/Safety%20Companion.png",
+      "projects/Safety_Companion/Login%20,%20SignUp%20and%20Home%20Screen.png",
+      "projects/Safety_Companion/Profile%20Screen%20and%20SignOut%20Screen.png",
+      "projects/Safety_Companion/Emergency%20Contact%20Person%20Call%20and%20Location%20Sharing.png",
+      "projects/Safety_Companion/Find%20Near%20by%20Safe%20Places.png",
+    ],
     selectionImage: "projects/mainimages/Safety%20Companion.png",
     overview:
       "Built an end-to-end personal safety companion application with Firebase-backed authentication and user profiles, enabling fast emergency actions, location-based assistance, and safety-awareness content for day-to-day risk situations.",
@@ -195,7 +205,7 @@ const projectData = [
       "Firestore-backed user profile management including emergency contact details.",
       "One-tap emergency contact calling using the user’s saved emergency number.",
       "Live location sharing via SMS by generating a Google Maps link from real-time GPS coordinates.",
-      "Quick-dial emergency service cards (police, ambulance, fire brigade, army) for rapid response access.",
+      "Quick-dial emergency service cards (police, ambulance, fire brigade, army) for rapid response access with correct service numbers.",
       "Nearby emergency place discovery (police stations, hospitals, pharmacies, bus and fuel stations) via Google Maps search integration.",
       "Safety tips and preparedness content delivered through an interactive in-app carousel with webview-based reading.",
       "Responsive Material UI with reusable cards/components and smooth navigation patterns.",
@@ -206,17 +216,21 @@ const projectData = [
       "Firebase Authentication implemented for secure account creation, login, logout, and session state handling.",
       "Cloud Firestore used to persist user records and emergency-related profile data.",
       "Geolocator and URL launcher integrations used for live GPS retrieval, SMS intent composition, and map/deep-link actions.",
+      "Flutter Phone Direct Caller used for one-tap emergency dialing actions.",
+      "WebView Flutter used to provide in-app reading for external safety and preparedness resources.",
     ],
     architecturePoints: [
       "Modular widget-based architecture separates Home, Profile, Emergency Access, Emergency Services, and LiveSafe discovery sections.",
       "Service layer abstraction (authentication/data services) isolates Firebase operations from presentation logic.",
       "Auth-state stream pattern controls route switching between authenticated and unauthenticated flows.",
       "Reusable subwidgets and card components keep UX consistent and simplify future feature expansion.",
+      "Curved bottom navigation organizes primary app sections for fast access.",
     ],
     additionalInfoPoints: [
       "Developed as an individual project with a strong real-world safety use case focus.",
       "Designed with extensibility in mind for future upgrades such as incident reporting, push alerts, and trusted contact workflows.",
       "Demonstrates practical integration of mobile device capabilities (calling, SMS, geolocation, maps) with cloud-backed user data.",
+      "Includes safety education content and profile-centric personalization to improve day-to-day usability.",
     ],
     github: "https://github.com/Mr-Nithil/safety_companion",
     demo: "",
@@ -327,4 +341,15 @@ const projectData = [
   },
 ];
 
-export const projects = [...projectData].sort((a, b) => b.year - a.year);
+const projectOrder = [
+  "flutter-fullstack-blog",
+  "safety-companion-app",
+  "railway-ticket-verification",
+  "task-manager-fullstack",
+  "stall-reservation-system",
+  "erp-academic-portal",
+];
+
+export const projects = projectOrder
+  .map((id) => projectData.find((project) => project.id === id))
+  .filter(Boolean);
