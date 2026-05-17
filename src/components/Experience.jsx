@@ -2,7 +2,7 @@ const experiences = [
   {
     title: "Freelance Software Engineer",
     company: "Fuelback Asia Pvt Ltd",
-    period: "May 2025 - Oct 2025",
+    period: "May 2025 - Sep 2025",
     highlights: [
       "Developed and maintained 2 production-grade Flutter applications supporting QR-based payment, geolocation-based services, Bluetooth integrations for proximity-based features and banking integrations.",
       "Designed scalable application architecture using Bloc and Provider for state management, collaborating closely with designers to ensure UI fidelity.",
