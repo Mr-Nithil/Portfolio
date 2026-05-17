@@ -1,5 +1,70 @@
 const projectData = [
   {
+    id: "pocketdesk-mobile-issue-tracker",
+    year: 2026,
+    title: "PocketDesk - Mobile Issue Tracker",
+    description:
+      "A mobile-first issue tracking app built with Clean Architecture, offline-first Hive persistence, and a BLoC-driven UI for reliable day-to-day issue management.",
+    techStack: [
+      "Flutter",
+      "Dart",
+      "BLoC",
+      "GetIt",
+      "Hive",
+      "shared_preferences",
+      "fpdart",
+      "file_picker",
+      "csv",
+      "share_plus",
+    ],
+    images: [
+      "projects/mainimages/PocketDesk.png",
+      "projects/PocketDesk/Login,%20Home%20-%20Light.png",
+      "projects/PocketDesk/Login%20,%20home%20-%20dark.png",
+      "projects/PocketDesk/Add,edit,delete%20-%20light.png",
+      "projects/PocketDesk/add,%20edit,%20delete%20-%20dark.png",
+      "projects/PocketDesk/Detail%20view%20with%20action%20buttons%20-%20light.png",
+      "projects/PocketDesk/Detail%20view%20with%20action%20-%20dark.png",
+      "projects/PocketDesk/Search%20,%20Filter%20-%20light.png",
+      "projects/PocketDesk/Settings,%20theme,%20csv%20export%20,%20signout.png",
+    ],
+    selectionImage: "projects/mainimages/PocketDesk.png",
+    overview:
+      "PocketDesk is a practical issue tracker that runs fully offline with Hive-backed storage. It supports authentication, full CRUD on issues, dashboards, search and filters, image attachments, CSV export, and persistent light/dark theme.",
+    keyFeatures: [
+      "Email/password authentication with a test account for local use.",
+      "Full issue CRUD with dashboard status counts.",
+      "Search by title with status and priority filters.",
+      "Offline-first operation with Hive persistence and pull-to-refresh.",
+      "CSV export with share support and local image attachments.",
+      "Light/dark theme toggle with persisted preference.",
+      "Robust loading, empty, and error states across the UX.",
+      "Dedicated tests for CRUD, search, filter, and CSV export.",
+    ],
+    techStackDetails: [
+      "Flutter & Dart: Cross-platform UI with a clean, modular structure.",
+      "BLoC: Event-driven state management for predictable UI flows.",
+      "Hive & Hive Flutter: Local storage for issues and preferences to enable offline-first behavior.",
+      "GetIt: Service locator for dependency injection across layers.",
+      "shared_preferences: Used for auth mock persistence and session-like state.",
+      "file_picker + path_provider + share_plus + csv: File attachments, local file access, CSV generation, and sharing.",
+    ],
+    architecturePoints: [
+      "Clean Architecture with Data, Domain, and Presentation layers.",
+      "Use case-driven Domain layer to keep business logic isolated and testable.",
+      "Repository pattern abstracts the data source from the UI and Domain.",
+      "BLoC mediates Presentation state using explicit events and states.",
+    ],
+    additionalInfoPoints: [
+      "All core functionality works fully offline with Hive-backed persistence.",
+      "Theme preference is stored locally and restored on launch.",
+      "CSV export is share-ready and uses a dedicated service layer.",
+      "Tests cover CRUD, search, filter, and CSV output validation.",
+    ],
+    github: "https://github.com/Mr-Nithil/Pocket-Desk",
+    demo: "",
+  },
+  {
     id: "flutter-fullstack-blog",
     year: 2026,
     title: "Full Stack Mobile Blog App",
@@ -342,6 +407,7 @@ const projectData = [
 ];
 
 const projectOrder = [
+  "pocketdesk-mobile-issue-tracker",
   "flutter-fullstack-blog",
   "safety-companion-app",
   "railway-ticket-verification",
