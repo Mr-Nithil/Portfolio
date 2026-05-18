@@ -1,5 +1,52 @@
 const projectData = [
   {
+    id: "music-streaming-application",
+    year: 2026,
+    title: "Music Streaming Application",
+    description:
+      "A full-stack music streaming app built with MVVM and a feature-first structure, backed by a FastAPI + PostgreSQL service.",
+    techStack: [
+      "Flutter",
+      "Dart",
+      "FastAPI",
+      "PostgreSQL",
+      "Cloudinary",
+      "Riverpod (Generators)",
+      "Hive",
+      "http",
+    ],
+    images: [
+      "projects/qrpay-1.svg",
+      "projects/qrpay-2.svg",
+      "projects/qrpay-3.svg",
+    ],
+    overview:
+      "A full-stack music streaming platform with an MVVM, feature-wise structure and a REST API that handles auth and persistence.",
+    keyFeatures: [
+      "MVVM + feature-first architecture for a decoupled and scalable codebase.",
+      "FastAPI + PostgreSQL REST API with JWT auth and automated data persistence.",
+      "Riverpod Generators for complex UI state and background audio handling.",
+      "Hive for offline session persistence.",
+      "Cloudinary for high-quality media asset storage and management.",
+    ],
+    techStackDetails: [
+      "Flutter + Dart for a responsive, MVVM-based mobile streaming UI.",
+      "FastAPI + PostgreSQL for REST endpoints, JWT auth, and data persistence.",
+      "Riverpod Generators for reactive, real-time state and background audio control.",
+      "Hive + Cloudinary for offline sessions and cloud-hosted media assets.",
+    ],
+    architecturePoints: [
+      "MVVM keeps view logic isolated from data and service layers.",
+      "Feature-wise modularization simplifies scaling and maintenance.",
+    ],
+    additionalInfoPoints: [
+      "Offline session persistence keeps playback state resilient.",
+      "Cloud media storage enables high-quality streaming assets.",
+    ],
+    github: "https://github.com/Mr-Nithil/Music-Player-App",
+    demo: "",
+  },
+  {
     id: "pocketdesk-mobile-issue-tracker",
     year: 2026,
     title: "PocketDesk - Mobile Issue Tracker",
@@ -408,6 +455,7 @@ const projectData = [
 
 const projectOrder = [
   "pocketdesk-mobile-issue-tracker",
+  "music-streaming-application",
   "flutter-fullstack-blog",
   "safety-companion-app",
   "railway-ticket-verification",
