@@ -2,9 +2,23 @@ export const techIcons = {
   Flutter:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
   Dart: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
+  FastAPI:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+  Cloudinary:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudinary/cloudinary-original.svg",
+  "Riverpod (Generators)": "stack-icons/riverpod.png",
+  "Bloc/Cubit": "stack-icons/bloc.png",
+  "BLoC/Cubit": "stack-icons/bloc.png",
+  GetIt: "https://img.icons8.com/color/48/workflow.png",
+  shared_preferences: "https://img.icons8.com/color/48/save.png",
+  fpdart:
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
+  file_picker: "https://img.icons8.com/color/48/opened-folder.png",
+  csv: "https://img.icons8.com/color/48/csv.png",
+  share_plus: "https://img.icons8.com/color/48/share.png",
+  http: "https://img.icons8.com/color/48/api.png",
   Supabase:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg",
-  "Bloc/Cubit": "stack-icons/bloc.png",
   FPdart:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
   get_it: "https://img.icons8.com/color/48/workflow.png",

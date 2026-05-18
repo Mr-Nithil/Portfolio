@@ -55,7 +55,7 @@ const projectData = [
     techStack: [
       "Flutter",
       "Dart",
-      "BLoC",
+      "BLoC/Cubit",
       "GetIt",
       "Hive",
       "shared_preferences",
