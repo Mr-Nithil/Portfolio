@@ -1,5 +1,17 @@
 const experiences = [
   {
+    title: "Freelance Flutter Developer",
+    company: "Self-Employed",
+    period: "Jan 2025 – Present",
+    highlights: [
+      "Designed and delivered cross platform mobile applications for clients with Flutter, Firebase, and Supabase, focusing onreal-time and backend-driven features.",
+      "Managed the full development lifecycle, from requirements and UI/UX to Play Store/App Store deployment.",
+      "Built production-ready apps with real-time data, authentication, REST API integration, and geolocation features.",
+      "Worked under client confidentiality (NDA) on private applications, ensuring quality, performance, and maintainability.",
+      "Provided ongoing maintenance, feature updates, and technical support for deployed apps.",
+    ],
+  },
+  {
     title: "Freelance Software Engineer",
     company: "Fuelback Asia Pvt Ltd",
     period: "May 2025 - Sep 2025",
