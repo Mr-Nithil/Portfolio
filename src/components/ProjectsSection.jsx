@@ -1,4 +1,5 @@
 import { useState } from "react";
+import playStoreIcon from "../assets/google-play.png";
 import { projects } from "../data/projects";
 import { techIcons } from "../data/techIcons";
 import ProjectModal from "./ProjectModal";
@@ -18,6 +19,7 @@ function ProjectsSection() {
           const previewTech = project.techStack.slice(0, 6);
           const extraTechCount = project.techStack.length - previewTech.length;
           const previewImage = project.selectionImage || project.images[0];
+          const playstoreLink = project.playstoreLink;
 
           return (
             <article className="project-card" key={project.id}>
@@ -57,13 +59,32 @@ function ProjectsSection() {
                   </li>
                 )}
               </ul>
-              <button
-                type="button"
-                className="btn ghost project-card-action"
-                onClick={() => setSelectedProject(project)}
-              >
-                View Details
-              </button>
+              <div className="project-card-actions">
+                <button
+                  type="button"
+                  className="btn ghost project-card-action"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  View Details
+                </button>
+                {playstoreLink ? (
+                  <a
+                    className="project-card-playstore"
+                    href={playstoreLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${project.title} on Google Play`}
+                  >
+                    <img
+                      className="project-card-playstore-icon"
+                      src={playStoreIcon}
+                      alt=""
+                      aria-hidden="true"
+                      loading="lazy"
+                    />
+                  </a>
+                ) : null}
+              </div>
             </article>
           );
         })}
