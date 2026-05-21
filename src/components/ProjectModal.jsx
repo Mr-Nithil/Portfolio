@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
+import playStoreIcon from "../assets/google-play.png";
 import { techIcons } from "../data/techIcons";
 
 function ProjectModal({ project, onClose }) {
@@ -67,6 +68,7 @@ function ProjectModal({ project, onClose }) {
               "Additional implementation notes, results, and refinements can be added here later.",
             ];
   const linkedInDemo = project.linkedinDemo || project.demo;
+  const playstoreLink = project.playstoreLink;
   const hasMultipleImages = project.images.length > 1;
 
   const nextImage = () => {
@@ -279,6 +281,23 @@ function ProjectModal({ project, onClose }) {
             >
               View GitHub
             </a>
+            {playstoreLink ? (
+              <a
+                className="btn ghost with-icon"
+                href={playstoreLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  className="btn-icon playstore-icon"
+                  src={playStoreIcon}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+                Google Play Store
+              </a>
+            ) : null}
             {linkedInDemo ? (
               <a
                 className="btn ghost"
