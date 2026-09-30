@@ -16,38 +16,22 @@ function About() {
           </p>
 
           <p className="section-copy">
-            I have developed real-world applications involving QR-based
-            payments, geolocation services, Bluetooth features, and real-time
-            API-driven workflows. Alongside Flutter, I have worked with Kotlin
-            and Jetpack Compose, and I am exploring React Native.
-          </p>
-
-          <p className="section-copy">
-            I also build backend systems using ASP.NET Core and Node.js,
-            enabling end-to-end development of modern mobile applications. I
-            follow Clean Architecture, MVVM, and SOLID principles to ensure
-            scalability and maintainability.
+            My experience includes QR payments, real-time APIs, geolocation,
+            Bluetooth and IoT integrations, with additional experience in
+            Kotlin, Jetpack Compose, ASP.NET Core, and Node.js.
           </p>
         </div>
 
         <div className="about-panel about-highlights">
           <h3>Key areas of expertise</h3>
           <ul>
-            <li>Flutter cross-platform mobile development</li>
-            <li>Clean Architecture, MVVM, and state management</li>
-            <li>RESTful APIs and real-time systems</li>
-            <li>Backend development with ASP.NET Core and Node.js</li>
-            <li>Full-stack system development</li>
-            <li>PostgreSQL, MongoDB, Firebase, Supabase</li>
-            <li>Docker-based deployment</li>
+            <li>Production-ready mobile applications</li>
+            <li>Payments, APIs, Bluetooth, and IoT workflows</li>
+            <li>Clean Architecture and scalable systems</li>
+            <li>End-to-end development and deployment</li>
           </ul>
         </div>
       </div>
-
-      <p className="about-closing">
-        I am interested in mobile engineering opportunities where I can build
-        scalable applications and continue growing as an engineer.
-      </p>
     </section>
   );
 }

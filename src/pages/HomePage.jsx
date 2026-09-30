@@ -20,9 +20,9 @@ function HomePage() {
       <main>
         <Hero />
         <About />
-        <Skills />
         <ProjectsSection />
         <Experience />
+        <Skills />
         <Education />
         <Publications />
         <Certifications />

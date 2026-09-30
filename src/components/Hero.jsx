@@ -42,8 +42,36 @@ function Hero() {
             Flutter Engineer building production-grade mobile apps with Flutter,
             Dart, Kotlin, and React Native. Strong in Clean Architecture, MVVM,
             Bloc/Provider/Riverpod, and REST API integration with experience in
-            real-time data, QR payments, geolocation, and Bluetooth features.
+            real-time data, QR payments, geolocation, Bluetooth, and IoT
+            integrations involving connected devices and scanners.
           </p>
+
+          <div className="hero-availability">
+            <div>
+              <p className="eyebrow">Available to collaborate</p>
+              <h2>Freelance projects, consultancy, and mobile engineering</h2>
+              <p>
+                I help teams build reliable mobile products and connected
+                experiences involving device discovery, BLE communication, and
+                real-world sensor workflows.
+              </p>
+              <a className="hero-connect-link" href="#contact">
+                <span className="hero-connect-icon" aria-hidden="true">
+                  ↗
+                </span>
+                Let&apos;s connect about a project
+              </a>
+            </div>
+
+            <div className="hero-services" aria-label="Services offered">
+              <span>Flutter and React Native</span>
+              <span>Bluetooth and BLE device scanning</span>
+              <span>IoT peripherals, sensors, and proximity workflows</span>
+              <span>Connected-device communication and data handling</span>
+              <span>Payments, APIs, and backend systems</span>
+              <span>Architecture, code reviews, and deployment</span>
+            </div>
+          </div>
 
           <div className="hero-platforms" aria-label="Mobile platforms">
             {platformBadges.map((platform) => (
