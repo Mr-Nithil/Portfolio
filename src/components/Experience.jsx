@@ -1,14 +1,23 @@
 const experiences = [
   {
-    title: "Freelance Flutter Developer",
-    company: "Self-Employed",
-    period: "Jan 2025 – Present",
+    title: "Software Engineer",
+    company: "Scienter Technologies (Pte) Ltd",
+    period: "Jun 2026 – Present",
     highlights: [
-      "Designed and delivered cross platform mobile applications for clients with Flutter, Firebase, and Supabase, focusing onreal-time and backend-driven features.",
-      "Managed the full development lifecycle, from requirements and UI/UX to Play Store/App Store deployment.",
-      "Built production-ready apps with real-time data, authentication, REST API integration, and geolocation features.",
-      "Worked under client confidentiality (NDA) on private applications, ensuring quality, performance, and maintainability.",
-      "Provided ongoing maintenance, feature updates, and technical support for deployed apps.",
+      "Develop and maintain fintech, digital wallet, hospitality, and franchise applications for production environments.",
+      "Design scalable mobile app architectures using Clean Architecture principles with Flutter and React Native, ensuring clear separation of concerns and maintainability.",
+      "Integrate JustPay and LankaQR payment solutions while following secure coding practices and addressing VAPT concerns, API security, and sensitive data protection.",
+      "Manage mobile app builds, deployment, and releases to Google Play Store and Apple App Store.",
+    ],
+  },
+  {
+    title: "Freelance Mobile Engineer",
+    company: "Private Contractor",
+    period: "Nov 2025 – Apr 2026",
+    highlights: [
+      "Served as the sole mobile engineer for an enterprise-grade Flutter application, handling end-to-end development from architecture design to production deployment.",
+      "Developed complex workflow management using Riverpod, secure QR-based verification with backend integration, and offline-first data handling using Hive.",
+      "Integrated REST APIs and followed Clean Architecture and SOLID principles to build a reliable, maintainable production-ready application.",
     ],
   },
   {
